@@ -1,7 +1,7 @@
 #include <stdio.h> // Necessary for printf()
 // TODO Other includes
-#include <cstdlib>
-#include <ctime>
+#include <stdlib.h>
+#include <time.h>
 
 
 int main() {
@@ -10,19 +10,20 @@ int main() {
 	
 	// TODO Complete the program
     srand(time(NULL));
-    int myrand = rand() % 100;
+    int myrand = rand() % 11;
 
-    printf("The value is %i.\n", myrand);
 
-    if (0 <= myrand <= 4) {
-        printf("Eat more beef, kick less cats");
+    if (myrand >= 0 && myrand <= 4) {
+        printf("Eat more beef, kick less cats\n");
     }
-    else if (5 <= myrand <= 9) {
+    else if (myrand >= 5 && myrand <= 9) {
         printf("FRODO LIVES\n");
     }
     else {
-        printf("Larn is the best roguelike\n")
+        printf("Larn is the best roguelike\n");
     }
-    printf("The value is %i.\n", myrand);
+    printf("The random number was: %i.\n", myrand);
+
+    return 0;
 
 }
